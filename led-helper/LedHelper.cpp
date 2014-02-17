@@ -1,19 +1,19 @@
-#include "LED13.h"
+#include "LED.h"
 
-LED13::LED13(byte pin) {
+LED::LED(byte pin) {
   this->pin = pin;
   pinMode(this->pin, OUTPUT);
 }
 
-void LED13::on() {
+void LED::on() {
   digitalWrite(this->pin, HIGH);
 }
 
-void LED13::off() {
+void LED::off() {
   digitalWrite(this->pin, LOW);
 }
 
-void LED13::blink(int time) {
+void LED::blink(int time) {
   on();
   delay(time/2);
   off();
